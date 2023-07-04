@@ -172,7 +172,11 @@ console.log(todocom);
 
 
 //function and dom
-
+function sum(b,c){
+    let a = b + c;
+    return a;    
+};
+console.log(sum(3,4));
 
 
 
