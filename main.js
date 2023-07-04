@@ -171,6 +171,9 @@ console.log(todocom);
 
 
 
+//function and dom
+
+
 
 
 
