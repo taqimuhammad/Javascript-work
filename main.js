@@ -171,7 +171,7 @@ console.log(todocom);
 
 
 
-//function and dom
+//function and dom --> document object model
 function sum(b,c){
     let a = b + c;
     return a;    
