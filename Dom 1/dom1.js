@@ -1,6 +1,6 @@
 // PROPERTIES OF DOCUMENT OBJECT MODEL
 
-/*
+
 console.dir(document)  //shows the document object and all of the properties and methods attached to document object.
 //we can access them and manipulate to our needs. for eg document.all  document.[etc any property].
 console.log(document.domain); //gives the domain which is 127.0.0.1 as we are on localhost.
@@ -20,7 +20,7 @@ console.log(document.forms); //get forms on th page
 //select certain index.
 console.log(document.forms[0]);
 console.log(document.links); //get links
-console.log(document.images);   */
+console.log(document.images);   
 
 //Selecting methods we can use to query the dom.
 
