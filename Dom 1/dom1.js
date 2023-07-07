@@ -38,22 +38,22 @@ var header = document.getElementById('main-header')
 
 header.style.borderBottom = 'solid 3px #000';
 
-//  GetElementsbyCLassName
-// var item = document.getElementsByClassName('list-group-item');
-// console.log(item);
-// console.log(item[1]);  //get the item at 2nd position. at 2nd li tag.
-// item[1].textContent = 'Changed 2'; //change text of particular item.
-// item[1].style.fontWeight = 'bold';
-// item[1].style.backgroundColor = 'yellow';
+ GetElementsbyCLassName
+var item = document.getElementsByClassName('list-group-item');
+console.log(item);
+console.log(item[1]);  //get the item at 2nd position. at 2nd li tag.
+item[1].textContent = 'Changed 2'; //change text of particular item.
+item[1].style.fontWeight = 'bold';
+item[1].style.backgroundColor = 'yellow';
 
-// // add changes styles to all items in the list.
-// //item.style.backgroundColor = 'Blue'; 
-// // ^ not going to work as we have HTML collection,not array.
+// add changes styles to all items in the list.
+//item.style.backgroundColor = 'Blue'; 
+// ^ not going to work as we have HTML collection,not array.
 
-// //so use loop.
-// for(var i = 0;i < item.length; i++){
-//     item[i].style.backgroundColor = '#f4f4f4';
-// }
+//so use loop.
+for(var i = 0;i < item.length; i++){
+    item[i].style.backgroundColor = '#f4f4f4';
+}
 
 //  GetElementbyTagName ---> works same as above just uses tagname instead of classname.
 
