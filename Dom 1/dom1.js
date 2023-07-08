@@ -75,3 +75,38 @@ for(var i = 0;i < li.length; i++){
 
 
 //Query Selectors
+var header2 = document.querySelector('#main-header'); //used # as it is not getbyid so explicit define.
+header.style.borderBottom = 'solid 4px #ccc';
+
+var input = document.querySelector('input'); //takes the first input by default.
+input.value = 'Welcome';
+
+var submit = document.querySelector('input[type="submit"]');
+submit.value = 'Send';
+
+var items = document.querySelector('.list-group-item');
+items.style.color = 'red'; //changes the color of 1st item.
+
+var lastitem = document.querySelector('.list-group-item:last-child');
+lastitem.style.color = 'blue';
+
+//can also change nth child.
+var nthitem = document.querySelector('.list-group-item:nth-child(2)');
+nthitem.style.color = 'coral';
+
+//Query Selectorsall
+
+//works similar to others and selects more than one thing.
+var titles = document.querySelectorAll('.title') //can put anything like classes,ids,etc.
+console.log(titles); //gives a nodelist and we can run array functions.
+// two titles so titles[0] gives first.
+titles[0].textContent = 'Select Items';
+
+//alternate gray background.
+var odd = document.querySelectorAll('li:nth-child(odd)');
+var even = document.querySelectorAll('li:nth-child(even)');
+
+for(var i = 0; i < odd.length; i++){
+    odd[i].style.backgroundColor = '#f4f4f4';
+    even[i].style.backgroundColor = '#ccc';
+}
