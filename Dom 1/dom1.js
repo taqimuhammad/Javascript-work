@@ -110,3 +110,6 @@ for(var i = 0; i < odd.length; i++){
     odd[i].style.backgroundColor = '#f4f4f4';
     even[i].style.backgroundColor = '#ccc';
 }
+
+
+//Traversing the dom
