@@ -113,3 +113,21 @@ for(var i = 0; i < odd.length; i++){
 
 
 //Traversing the dom
+
+// Traversing the DOM
+
+var itemlist = document.querySelector('#items');
+//parentNode property
+// console.log(itemlist.parentNode);
+// itemlist.parentNode.style.backgroundColor = '#f4f4f4';
+// console.log(itemlist.parentNode.parentNode.parentNode);
+
+//parentElement-->most cases can be used interchangbly with parentNode as it does the same thing.
+// console.log(itemlist.parentElement);
+// itemlist.parentElement.style.backgroundColor = '#f4f4f4';
+// console.log(itemlist.parentElement.parentElement.parentElement);
+
+//childNodes
+console.log(itemlist.childNodes);
+//in console we see text alternatively with li which is just the linebreak.
+console.log(itemlist.children);
