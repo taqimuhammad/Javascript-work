@@ -20,7 +20,7 @@ console.log(document.forms); //get forms on th page
 //select certain index.
 console.log(document.forms[0]);
 console.log(document.links); //get links
-console.log(document.images);   */
+console.log(document.images);   
 
 //Selecting methods we can use to query the dom.
 
@@ -38,22 +38,22 @@ var header = document.getElementById('main-header')
 
 header.style.borderBottom = 'solid 3px #000';
 
- GetElementsbyCLassName
-var item = document.getElementsByClassName('list-group-item');
-console.log(item);
-console.log(item[1]);  //get the item at 2nd position. at 2nd li tag.
-item[1].textContent = 'Changed 2'; //change text of particular item.
-item[1].style.fontWeight = 'bold';
-item[1].style.backgroundColor = 'yellow';
+//  GetElementsbyCLassName
+// var item = document.getElementsByClassName('list-group-item');
+// console.log(item);
+// console.log(item[1]);  //get the item at 2nd position. at 2nd li tag.
+// item[1].textContent = 'Changed 2'; //change text of particular item.
+// item[1].style.fontWeight = 'bold';
+// item[1].style.backgroundColor = 'yellow';
 
-// add changes styles to all items in the list.
-//item.style.backgroundColor = 'Blue'; 
-// ^ not going to work as we have HTML collection,not array.
+// // add changes styles to all items in the list.
+// //item.style.backgroundColor = 'Blue'; 
+// // ^ not going to work as we have HTML collection,not array.
 
-//so use loop.
-for(var i = 0;i < item.length; i++){
-    item[i].style.backgroundColor = '#f4f4f4';
-}
+// //so use loop.
+// for(var i = 0;i < item.length; i++){
+//     item[i].style.backgroundColor = '#f4f4f4';
+// }
 
 //  GetElementbyTagName ---> works same as above just uses tagname instead of classname.
 
@@ -62,17 +62,17 @@ console.log(li);
 console.log(li[1]);  //get the item at 2nd position. at 2nd li tag.
 li[1].textContent = 'Changed 2'; //change text of particular item.
 li[1].style.fontWeight = 'bold';
-li[1].style.backgroundColor = 'yellow';
+//li[1].style.backgroundColor = 'yellow';
 
 // add changes styles to all items in the list.
 //item.style.backgroundColor = 'Blue'; 
 // ^ not going to work as we have HTML collection,not array.
 
 //so use loop.
-for(var i = 0;i < li.length; i++){
+/*for(var i = 0;i < li.length; i++){
     li[i].style.backgroundColor = '#f4f4f4';
 }
-
+*//*
 
 //Query Selectors
 var header2 = document.querySelector('#main-header'); //used # as it is not getbyid so explicit define.
@@ -110,12 +110,13 @@ for(var i = 0; i < odd.length; i++){
     odd[i].style.backgroundColor = '#f4f4f4';
     even[i].style.backgroundColor = '#ccc';
 }
-
+*/
 
 // Traversing the DOM
 
 var itemlist = document.querySelector('#items');
 //parentNode property
+
 // console.log(itemlist.parentNode);
 // itemlist.parentNode.style.backgroundColor = '#f4f4f4';
 // console.log(itemlist.parentNode.parentNode.parentNode);
@@ -126,6 +127,86 @@ var itemlist = document.querySelector('#items');
 // console.log(itemlist.parentElement.parentElement.parentElement);
 
 //childNodes
-console.log(itemlist.childNodes);
-//in console we see text alternatively with li which is just the linebreak.
-console.log(itemlist.children);
+
+// console.log(itemlist.childNodes);
+// //in console we see text alternatively with li which is just the linebreak.
+// console.log(itemlist.children);
+// console.log(itemlist.children[1]);
+// itemlist.children[1].style.backgroundColor = 'coral';
+
+// //firstChild
+// console.log(itemlist.firstChild); //gives text but should give li as same issue due tolinebreak.
+
+// //firstElementChild
+// console.log(itemlist.firstElementChild);
+// itemlist.firstElementChild.textContent = 'Food';
+
+// //lastChild
+// console.log(itemlist.lastChild); //gives text but should give li as same issue due tolinebreak.
+
+// //lastElementChild
+// console.log(itemlist.lastElementChild);
+// itemlist.lastElementChild.textContent = 'Movie';
+
+//nextSibling
+console.log(itemlist.nextSibling);
+//nextElementSibling
+console.log(itemlist.nextElementSibling);
+
+//previousSibling
+console.log(itemlist.previousSibling);
+// previousElementSibling
+console.log(itemlist.previousElementSibling);
+itemlist.previousElementSibling.style.color = 'green';
+
+// createElement
+var newDiv = document.createElement('div');
+
+// add class
+newDiv.className = 'hello';
+
+// add id
+newDiv.id = 'hello1';
+
+// add attribute
+newDiv.setAttribute('title','Welcome to new Div');
+
+// create text node
+var newDivText = document.createTextNode('New Div');
+
+// add text to div
+newDiv.appendChild(newDivText);
+
+// put it in the dom
+
+var cont = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+
+cont.insertBefore(newDiv,h1);//takes 2 parameters.
+//what we are inserting and one is what we are inserting before.
+
+newDiv.style.fontSize = '30px';
+
+
+console.log(newDiv);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
