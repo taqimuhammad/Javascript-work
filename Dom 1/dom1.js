@@ -112,8 +112,6 @@ for(var i = 0; i < odd.length; i++){
 }
 
 
-//Traversing the dom
-
 // Traversing the DOM
 
 var itemlist = document.querySelector('#items');
