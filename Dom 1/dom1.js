@@ -112,7 +112,7 @@ for(var i = 0; i < odd.length; i++){
 }
 */
 
-// Traversing the DOM
+// Traversing the DOM /*
 
 var itemlist = document.querySelector('#items');
 //parentNode property
@@ -188,7 +188,7 @@ cont.insertBefore(newDiv,h1);//takes 2 parameters.
 newDiv.style.fontSize = '30px';
 
 
-console.log(newDiv);
+console.log(newDiv); */
 
 
 
