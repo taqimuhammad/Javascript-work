@@ -112,7 +112,8 @@ for(var i = 0; i < odd.length; i++){
 }
 */
 
-// Traversing the DOM /*
+// Traversing the DOM 
+/*
 
 var itemlist = document.querySelector('#items');
 //parentNode property
