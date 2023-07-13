@@ -188,8 +188,23 @@ cont.insertBefore(newDiv,h1);//takes 2 parameters.
 
 newDiv.style.fontSize = '30px';
 
-
 console.log(newDiv); */
+
+// EVENTS IN JAVASCRIPT
+
+//buttonClick function in button tag
+//use any method
+var button = document.getElementById('button').addEventListener
+('click', function(){
+    console.log(123); //or replace it with buttonClick function below.
+    return;
+}); 
+
+var button = document.getElementById('button').addEventListener('click',buttonClick);
+
+function buttonClick(){
+     console.log('Button Clicked');
+};
 
 
 
