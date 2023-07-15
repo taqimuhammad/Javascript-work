@@ -193,18 +193,66 @@ console.log(newDiv); */
 // EVENTS IN JAVASCRIPT
 
 //buttonClick function in button tag
-//use any method
-var button = document.getElementById('button').addEventListener
-('click', function(){
-    console.log(123); //or replace it with buttonClick function below.
-    return;
-}); 
 
-var button = document.getElementById('button').addEventListener('click',buttonClick);
+// var button = document.getElementById('button').addEventListener
+// ('click', function(){
+//     console.log(123); //or replace it with buttonClick function below.
+//     return;
+// }); 
+
+var button = document.getElementById('button').addEventListener('click',buttonclick);
 
 function buttonClick(){
-     console.log('Button Clicked');
+    // console.log('Button Clicked');
+    // so now when button gets clicked header changes.
+    document.getElementById('header-title').textContent = 'Changed';
+    // changes the add item div.
+    document.querySelector('#main').style.backgroundColor = '#f4f4f4'; //can also do it by getElementbyID
 };
+
+// e is the event object passed in function.
+//event parameter
+function buttonclick(e){
+    //console.log(e);
+    
+    //gives whatever element the event is fired from
+    console.log(e.target);
+    //gives id
+    console.log(e.target.id);
+    console.log(e.target.className);
+    console.log(e.target.classList);//gives dom tokenlist array of classes
+    var output = document.getElementById('output');
+    output.innerHTML = '<h3>'+e.target.id+'</h3>';
+
+    console.log(e.type); // gives the type of event whether a click ot etc.
+    console.log(e.clientX); // gives the position of X from the browser
+    console.log(e.clientY);
+
+    console.log(e.offsetX); // gives positon from element itself(etc button)
+    console.log(e.offsetY);
+
+    console.log(e.altkey); //hold alt key and click button turns true;
+    console.log(e.ctrlkey);
+    console.log(e.shiftkey);    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
