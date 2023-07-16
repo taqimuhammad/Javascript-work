@@ -236,6 +236,72 @@ function buttonclick(e){
     console.log(e.shiftkey);    
 }
 
+// EVENT TYPES
+
+var button = document.getElementById('button');
+var box = document.getElementById('box');
+
+// button.addEventListener('click',runEvent);
+// button.addEventListener('dblclick',runEvent);  //double click
+// button.addEventListener('mousedown',runEvent); //mousedown--as soon as mouse clicks
+// button.addEventListener('mouseup',runEvent); //click and hold nothing happens but as soon as you release event fires.
+
+// box.addEventListener('mouseenter',runEvent); //as soon as we enter box it fires off
+// box.addEventListener('mouseleave',runEvent); 
+
+//difference is mouseover works for hello element(inner elemeents) /
+// mouseenter works for parent element. 
+
+// box.addEventListener('mouseover',runEvent);
+// box.addEventListener('mouseout',runEvent);
+
+// box.addEventListener('mousemove',runEvent);//works all time we move mouse inside box.
+var iteminput = document.querySelector('input[type="text"]');
+var form = document.querySelector('form');
+var select =document.querySelector('select');
+
+// //event fires of when we type.
+// iteminput.addEventListener('keydown',runEvent);
+// //event fires when we release the key.
+// iteminput.addEventListener('keyup',runEvent);
+// iteminput.addEventListener('keypress',runEvent);
+
+// iteminput.addEventListener('focus',runEvent); // click inside of the input and it highlights.
+// iteminput.addEventListener('blur',runEvent); //click out of input = blur
+
+// iteminput.addEventListener('cut',runEvent); // type something and cut it the event fires of.
+// iteminput.addEventListener('paste',runEvent);
+
+// iteminput.addEventListener('input',runEvent); // whatever we do in input it fires off.
+
+select.addEventListener('change',runEvent);
+select.addEventListener('input',runEvent);
+
+//submittin to the page working as a regular html form to prevent it call a function prevent default.
+form.addEventListener('submit',runEvent);
+
+function runEvent(e){
+    console.log('Event Type:' + e.type);
+    e.preventDefault(); //not submitting to anywhere by default.
+
+    //document.body.style.display = 'none'; //trick-->if we cut the page goes blank.best for freaking friends out.
+
+    // gives value of what you type in iteminput(ADD ITEMS).
+    // can also output it anywhere on the page.in output div under list of items
+    // console.log(e.target.value);
+    // document.getElementById('output').innerHTML = '<h3>'+e.target.value+'</h3>'; 
+
+    // tracks mouse position inside the box. we can output such things and use it to our liking.
+    // output.innerHTML = '<h3>MouseX:'+e.offsetX +'</h3><h3>MouseY:'+e.offsetY +'</h3>';
+
+    // can set rgb values and connect it to offset
+    // so when we move mouse over the box it changes colors. 
+    // box.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+",40)"; 
+
+    //can do same with body
+    //document.body.style.backgroundColor = "rgb("+e.offsetX+","+e.offsetY+",40)"; 
+}
+
 
 
 
