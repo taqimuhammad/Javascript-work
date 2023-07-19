@@ -53,6 +53,37 @@ function removeItem(e){
 }
 
 
+// filter items
+function filterItems(e){
+    // convert to lowercase
+    var text = e.target.value.toLowerCase();
+    // get li's
+    var items = itemlist.getElementsByTagName('li');
+    //convert to an array from collection
+    Array.from(items).forEach(function(item){
+        var itemName = item.firstChild.textContent;
+        if(itemName.toLowerCase().indexOf(text) != -1){
+            item.style.display = 'block';
+        }
+        else{
+            item.style.display = 'none';
+        }
+    });
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
