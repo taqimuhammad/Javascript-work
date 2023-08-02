@@ -1,2 +1,2 @@
 # Javascript-work
-Just some small tasks in javascript
+Just some small tasks in JavaScript
