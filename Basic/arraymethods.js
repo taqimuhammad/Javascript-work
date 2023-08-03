@@ -20,12 +20,59 @@ for(let i = 0; i < companies.length; i++){
 }
 
 // forEach
-
+companies.forEach(function(Company){
+    console.log(Company.name);
+});
 
 // filter
 
+let candrink = [];
+for (let i = 0; i < ages.length; i++) {
+    if(ages[i] >= 21){
+        candrink.push(ages[i]);
+    }
+}
+
+// using filter method
+const candrink = ages.filter(function(age){
+    if(age >= 21){
+        return true;
+    }
+});
+
+// can better this also by writing one liner
+const candrink = ages.filter((age) => age >= 21);
+// console.log(candrink);
+
+// filter retail companies
+const rcomp = companies.filter(function(company){
+    if(company.category === 'Retail'){
+        return true;
+    }
+});
+
+//one liner
+const company = companies.filter((company) => company.category === 'Retail'); 
+// console.log(company);
+
+// get 80s companies
+
+const comp80 = companies.filter((company) => (company.start >= 1980 && company.start < 1990));
+// console.log(comp80);
+
+// companies that lasted 10 years
+const comp10 = companies.filter((company) => (company.end - company.start >= 10));
+// console.log(comp10);
 
 // map
+create array of company names
+const cnames = companies.map(function(company){
+    return company.name;
+});
+
+// one liner arrow function
+const names = companies.map(company => company.name);
+console.log(names);
 
 
 // sort
