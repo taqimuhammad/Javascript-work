@@ -72,7 +72,7 @@ const cnames = companies.map(function(company){
 
 // one liner arrow function
 const names = companies.map(company => company.name);
-console.log(names);
+// console.log(names);
 
 const testmap = companies.map(function(company){
     return `${company.name} [${company.start} - ${company.end}]`;
@@ -95,14 +95,14 @@ const agemap = ages // sqrt ages and then multiplies them by 2
 //    console.log(agemap);
 
 // sort
-// const sortcomp = companies.sort(function(c1, c2){
-//     if(c1.start > c2.start){
-//         return 1;                       
-//     }           
-//     else{
-//         return -1;
-//     }
-// });
+const sortcomp = companies.sort(function(c1, c2){
+    if(c1.start > c2.start){
+        return 1;                       
+    }           
+    else{
+        return -1;
+    }
+});
 
 const sortcomp = companies.sort((a,b) => (a.start > b.start ? 1 : -1));
 
@@ -124,19 +124,19 @@ for(let i = 0; i < ages.length; i++){
 
 // with reduce
 
-// const agesum = ages.reduce(function(total,age){
-//     return total + age;
-// },0);
+const agesum = ages.reduce(function(total,age){
+    return total + age;
+},0);
 
 // with arrow function
 const agesum = ages.reduce((total,age) => total + age , 0);
 
 // console.log(agesum);
 
-// total years for all companies
-// const tyears = companies.reduce(function(total,company){
-//     return total + (company.end - company.start);
-// },0);
+total years for all companies
+const tyears = companies.reduce(function(total,company){
+    return total + (company.end - company.start);
+},0);
 
 // arrow function
 const tyears = companies.reduce((total,company) => total + (company.end - company.start), 0);
@@ -146,4 +146,10 @@ console.log(tyears);
 // combine methods
 
 const combined = ages
-    .map(age => age)
+    .map(age => age * 2)
+    .filter(age => age >= 40)
+    .sort((a,b) => a - b)
+    .reduce((a,b) => a + b,0);
+
+console.log(combined);    
+
