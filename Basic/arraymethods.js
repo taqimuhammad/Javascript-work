@@ -74,8 +74,76 @@ const cnames = companies.map(function(company){
 const names = companies.map(company => company.name);
 console.log(names);
 
+const testmap = companies.map(function(company){
+    return `${company.name} [${company.start} - ${company.end}]`;
+});
+
+// one liner method
+const stestmap = companies.map(company => `${company.name} [${company.start} - ${company.end}]`);
+// console.log(stestmap);
+
+const agesSq = ages.map(age =>  Math.sqrt(age)); 
+const ages2 = ages.map(age =>  age * 2); 
+
+// console.log(agesSq);
+// console.log(ages2);
+
+const agemap = ages // sqrt ages and then multiplies them by 2
+    .map(age =>  Math.sqrt(age))
+    .map(age =>  age * 2); 
+
+//    console.log(agemap);
 
 // sort
+// const sortcomp = companies.sort(function(c1, c2){
+//     if(c1.start > c2.start){
+//         return 1;                       
+//     }           
+//     else{
+//         return -1;
+//     }
+// });
 
+const sortcomp = companies.sort((a,b) => (a.start > b.start ? 1 : -1));
+
+// console.log(sortcomp);
+
+// sort ages
+const sortages = ages.sort((a,b) => a - b); //descending order: b - a
+// console.log(sortages);
 
 // reduce
+
+// add all the ages together
+
+let ageSum = 0;
+for(let i = 0; i < ages.length; i++){
+    ageSum += ages[i];
+}
+// console.log(ageSum);
+
+// with reduce
+
+// const agesum = ages.reduce(function(total,age){
+//     return total + age;
+// },0);
+
+// with arrow function
+const agesum = ages.reduce((total,age) => total + age , 0);
+
+// console.log(agesum);
+
+// total years for all companies
+// const tyears = companies.reduce(function(total,company){
+//     return total + (company.end - company.start);
+// },0);
+
+// arrow function
+const tyears = companies.reduce((total,company) => total + (company.end - company.start), 0);
+
+console.log(tyears);
+
+// combine methods
+
+const combined = ages
+    .map(age => age)
