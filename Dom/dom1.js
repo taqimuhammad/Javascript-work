@@ -38,7 +38,7 @@ var header = document.getElementById('main-header')
 
 header.style.borderBottom = 'solid 3px #000';
 
-//  GetElementsbyCLassName
+//  GetElementsbyCLassName  -->not recommended
 // var item = document.getElementsByClassName('list-group-item');
 // console.log(item);
 // console.log(item[1]);  //get the item at 2nd position. at 2nd li tag.
