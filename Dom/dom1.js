@@ -270,7 +270,7 @@ var select =document.querySelector('select');
 // iteminput.addEventListener('blur',runEvent); //click out of input = blur
 
 // iteminput.addEventListener('cut',runEvent); // type something and cut it the event fires of.
-// iteminput.addEventListener('paste',runEvent);
+// iteminput.addEventListener('paste',runEvent); // add prevent default and you prevent people from cut or paste. very useful
 
 // iteminput.addEventListener('input',runEvent); // whatever we do in input it fires off.
 
