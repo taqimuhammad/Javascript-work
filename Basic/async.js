@@ -62,7 +62,7 @@ function createPost(post){
         setTimeout(() => {
             posts.push(post);
 
-            const error = false; //true --> .catch added after .then
+            const error = true; //true --> .catch added after .then
             if(!error){
                 resolve();
             }
@@ -74,5 +74,7 @@ function createPost(post){
 }
 
 //call this function
-createPost({title:'Post Three',body:'This is post three'}).then(getPosts);
+createPost({title:'Post Three',body:'This is post three'})
+    .then(getPosts)
+    .catch(err => console.log(err));
 
