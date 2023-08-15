@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+<body>
+    <button id="getText">Get Text</button>
+
+    <script>
+        document.getElementById('getText').addEventListener('click', getText);
+
+        function getText(){
+            // we have to fetch a txt file
+            // takes a parameter either url or filename , whatever we are fetching.
+            // returns a promise so use .then
+            fetch('sample.txt').then(function (res){
+                console.log(res.text());  //res is a response, we want the text in the file so use .text()
+            })         
+        }
+
+    </script>
+</body>
+</html>
