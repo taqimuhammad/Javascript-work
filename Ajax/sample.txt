@@ -1,0 +1,2 @@
+Hello this is your sample file.
+Data is being fetched with Ajax.
